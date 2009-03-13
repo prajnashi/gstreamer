@@ -7,7 +7,7 @@ GST_MAJORMINOR:= 0.10
 LOCAL_SRC_FILES:= \
     gstindexers.c   \
     gstmemindex.c
-        	
+
 LOCAL_SHARED_LIBRARIES := \
     libgstbase-0.10       \
     libgstreamer-0.10       \
@@ -18,20 +18,22 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_MODULE:= libgstcoreindexers
 
-LOCAL_TOP_PATH := $(LOCAL_PATH)/../../..
+#LOCAL_TOP_PATH := $(LOCAL_PATH)/../../..
 
-LOCAL_C_INCLUDES := \
-    $(LOCAL_TOP_PATH)/gstreamer       \
-    $(LOCAL_TOP_PATH)/gstreamer/android       \
-	$(LOCAL_TOP_PATH)/gstreamer/libs \
-	$(LOCAL_TOP_PATH)/gstreamer/gst	\
-	$(LOCAL_TOP_PATH)/gstreamer/gst/android	\
-	$(LOCAL_TOP_PATH)/glib   \
-	$(LOCAL_TOP_PATH)/glib/android   \
-	$(LOCAL_TOP_PATH)/glib/glib   \
-	$(LOCAL_TOP_PATH)/glib/gmodule   \
-	$(LOCAL_TOP_PATH)/glib/gobject  \
-	$(LOCAL_TOP_PATH)/glib/gthread
+LOCAL_PRELINK_MODULE := false 
+
+LOCAL_C_INCLUDES := 			\
+	external/gstreamer       	\
+	external/gstreamer/android      \
+	external/gstreamer/libs 	\
+	external/gstreamer/gst		\
+	external/gstreamer/gst/android	\
+	external/glib   		\
+	external/glib/android   	\
+	external/glib/glib   		\
+	external/glib/gmodule   	\
+	external/glib/gobject  		\
+	external/glib/gthread
 
 LOCAL_CFLAGS := \
 	-DHAVE_CONFIG_H			

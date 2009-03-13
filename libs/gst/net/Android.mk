@@ -18,20 +18,20 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_MODULE:= libgstnet-$(GST_MAJORMINOR)
 
-LOCAL_TOP_PATH := $(LOCAL_PATH)/../../../..
+#LOCAL_TOP_PATH := $(LOCAL_PATH)/../../../..
 
-LOCAL_C_INCLUDES := \
-    $(LOCAL_PATH)/../.. \
-    $(LOCAL_TOP_PATH)/gstreamer       \
-    $(LOCAL_TOP_PATH)/gstreamer/android       \
-    $(LOCAL_TOP_PATH)/gstreamer/gst	\
-    $(LOCAL_TOP_PATH)/gstreamer/gst/android	\
-    $(LOCAL_TOP_PATH)/glib   \
-    $(LOCAL_TOP_PATH)/glib/android   \
-    $(LOCAL_TOP_PATH)/glib/glib   \
-    $(LOCAL_TOP_PATH)/glib/gmodule   \
-    $(LOCAL_TOP_PATH)/glib/gobject  \
-    $(LOCAL_TOP_PATH)/glib/gthread
+LOCAL_C_INCLUDES := 			\
+    $(GSTREAMER_TOP) 			\
+    external/gstreamer       		\
+    external/gstreamer/android       	\
+    external/gstreamer/gst		\
+    external/gstreamer/gst/android	\
+    external/glib   			\
+    external/glib/android   		\
+    external/glib/glib   		\
+    external/glib/gmodule   		\
+    external/glib/gobject  		\
+    external/glib/gthread
 
 LOCAL_CFLAGS := \
 	-DHAVE_CONFIG_H			
