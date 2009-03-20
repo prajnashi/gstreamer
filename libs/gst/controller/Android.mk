@@ -22,10 +22,8 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_MODULE:= libgstcontroller-$(GST_MAJORMINOR)
 
-#LOCAL_TOP_PATH := $(LOCAL_PATH)/../../../..
-
 LOCAL_C_INCLUDES := 			\
-	$(GSTREAM_TOP)			\
+	$(GSTREAMER_TOP)		\
 	external/gstreamer 		\
 	external/gstreamer/android 	\
 	external/gstreamer/libs		\
